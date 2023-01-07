@@ -1,0 +1,11 @@
+.introduction {
+  background-color: #282c34;
+  color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+}
+
