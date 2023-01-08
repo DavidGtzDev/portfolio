@@ -1,0 +1,58 @@
+.skills {
+  display: flex;
+  justify-content: space-around;
+  width: 90vw;
+  margin-top: 90px;
+  margin-left: 5px;
+}
+
+.skills_text {
+  width: 40vw;
+  margin-left: 5px;
+}
+
+.color_cyan {
+  color: #56b6c2;
+}
+
+.color_blue {
+  color: #61afef;
+}
+
+.color_red {
+  color: #e06c75;
+}
+
+.color_green {
+  color: #98c379;
+}
+
+.color_yellow {
+  color: #e5c07b;
+}
+
+.color_white {
+  color: #ffffff;
+}
+
+.color_purple {
+  color: #c678dd;
+}
+
+.skills_image_container{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills_image_first{
+    margin-top: 50px;
+}
+
+.skills_image_second{
+    margin-bottom: 50px;
+}
+
+.skills_image_third{
+    margin-top: 50px;
+}
