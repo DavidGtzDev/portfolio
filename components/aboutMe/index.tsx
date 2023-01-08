@@ -37,15 +37,11 @@ export default function AboutMe() {
         <Image
           src={catOneImg}
           alt="Picture of the author"
-          width={200}
-          height={250}
           className={style.aboutMe_image_first}
         />
         <Image
           src={catOneImg}
           alt="Picture of the author"
-          width={300}
-          height={250}
           className={style.aboutMe_image_second}
         />
       </div>

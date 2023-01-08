@@ -1,6 +1,8 @@
 .aboutMe {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  
 }
 
 .text {
@@ -51,10 +53,14 @@
 .aboutMe_image_first {
   filter: grayscale(100%) drop-shadow(12px 12px 0px #61afef);
   object-fit: cover;
+  width: 15vw;
+  height: 30vh;
 }
 
 .aboutMe_image_second {
   filter: grayscale(100%) drop-shadow(12px 12px 0px #c678dd);
   margin-top: 40px;
+  width: 25vw;
+  height: 25vh;
   object-fit: cover;
 }

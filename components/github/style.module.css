@@ -1,9 +1,30 @@
 .github {
   display: flex;
   justify-content: space-around;
-  margin-top: 60px;
+  align-items: center;
+  height: 70vh;
+  flex-wrap: wrap;
 }
 
+.react-calendar-heatmap .color-scale-1 {
+  fill: #d6e685;
+}
+.react-calendar-heatmap .color-scale-2 {
+  fill: #8cc665;
+}
+.react-calendar-heatmap .color-scale-3 {
+  fill: #44a340;
+}
+.react-calendar-heatmap .color-scale-4 {
+  fill: #1e6823;
+}
+.react-calendar-heatmap .color-empty {
+  fill: #d16666;
+}
+
+.githubText {
+  margin-left: 10px;
+}
 .color_cyan {
   color: #56b6c2;
 }

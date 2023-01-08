@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./style.module.css";
 import Image from "next/image";
-import mongoImg from "../../assets/mongo.jpg"
+import jsImg from "../../assets/js.jpg"
 import reactImg from "../../assets/react.jpg"
 import nodeImg from "../../assets/node.jpg"
 
@@ -28,7 +28,9 @@ export default function Skills() {
         </span>
       </div>
       <div className={style.skills_image_container}>
-        
+        <Image src={jsImg} alt="js" className={style.skills_image_first}/>
+        <Image src={reactImg} alt="react" className={style.skills_image_second}/>
+        <Image src={nodeImg} alt="node" className={style.skills_image_third}/>
       </div>
     </div>
   );

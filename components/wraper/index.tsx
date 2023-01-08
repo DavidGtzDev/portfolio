@@ -4,6 +4,7 @@ import style from "./style.module.css";
 import AboutMe from "../aboutMe";
 import Skills from "../skills";
 import Github from "../github";
+import MyProjects from "../myProjects";
 
 export default function Wraper() {
   return (
@@ -12,7 +13,7 @@ export default function Wraper() {
       <div className={style.subcontainer}>
         <AboutMe />
         <Skills></Skills>
-        <Github></Github>
+        <MyProjects></MyProjects>
       </div>
     </div>
   );

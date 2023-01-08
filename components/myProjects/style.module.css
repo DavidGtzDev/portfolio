@@ -1,0 +1,47 @@
+.sidebar{
+    background-color: #282C34;
+    display: block;
+    height: 100%;
+    width: 20vw;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    border: 1px solid #61AFEF;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+.active{
+    display: none;
+}
+
+.searchbar_folder{
+    display: flex;
+    width: 20vw;
+    align-items: baseline;  
+}
+
+.searchbar_folder > img{
+    margin-right: 10px;
+}
+
+.project_ul{
+    list-style-type: none;
+}
+
+.project_ul > li:hover{
+    color: #e5c07b;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.project_container{
+    margin-left: 10px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}

@@ -6,7 +6,7 @@ import "react-calendar-heatmap/dist/styles.css";
 export default function Github() {
   return (
     <div className={style.github}>
-      <div>
+      <div className={style.githubText}>
         <p>
           <span className={style.color_blue}>David.github</span>
           .latest
@@ -21,8 +21,25 @@ export default function Github() {
           </span>
         </p>
       </div>
-
-      
+      <div style={{ width: "30vw", height: "5vh" }}>
+        <CalendarHeatmap
+          startDate={new Date("2016-01-01")}
+          endDate={new Date("2016-07-01")}
+          gutterSize={3.5}
+          values={[
+            { date: "2016-01-01", count: 1 },
+            { date: "2016-01-22", count: 2 },
+            { date: "2016-01-30", count: 3 },
+            // ...and so on
+          ]}
+          classForValue={(value) => {
+            if (!value) {
+              return "color-empty";
+            }
+            return `color-scale-${value.count}`;
+          }}
+        />
+      </div>
     </div>
   );
 }
