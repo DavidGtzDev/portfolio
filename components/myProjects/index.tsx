@@ -2,65 +2,68 @@ import React from "react";
 import style from "./style.module.css";
 import Image from "next/image";
 import folderImg from "../../assets/folder.svg";
+import catImg from "../../assets/cat_one.jpg";
 //import ASCII from "react-rainbow-ascii";
 import { useEffect, useState } from "react";
+import type { StaticImageData } from "next/image";
 
 export default function MyProjects() {
-  const [title, setTitle] = useState("My Projects!");
-  const [text, setText] = useState("Press 1 to see my projects");
-  const projects = [
+
+  type Project = {
+    name: string;
+    description: string;
+    image: null | StaticImageData;
+  };
+
+  const [project, setProject] = useState<Project>({
+    name: "My Projects!",
+    description: "Press the text to see my projects",
+    image: null
+  });
+
+  const projects: Project[] = [
     {
       name: "Tec-on-Time",
       description:
-        "A web application that allows students to schedule appointments with their professors and tutors.",
-      image: folderImg,
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
+      image: catImg,
     },
     {
       name: "Etherfuse Hackathon",
       description:
-        "A web application that allows students to schedule appointments with their professors and tutors.",
-      image: folderImg,
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
+      image: catImg,
     },
     {
       name: "Startup Weekend",
       description:
-        "A web application that allows students to schedule appointments with their professors and tutors.",
-      image: folderImg,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
+      image: catImg,
     },
     {
       name: "Fintech Hackathon",
       description:
-        "A web application that allows students to schedule appointments with their professors and tutors.",
-      image: folderImg,
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
+      image: catImg,
     },
-  ];
+  ]
 
-  function handleSelect(e: any) {
-    setTitle(e.target.textContent);
-    if(!projects.find((project) => project.name === e.target.textContent)){
-        setText("Press 1 to see my projects");
-        
-    }else{
-        setText(projects.find((project) => project.name === e.target.textContent)!.description);
-    }
+  function styleRoulete() {
+    const randstyle = [style.color_red, style.color_blue, style.color_cyan, style.color_yellow, style.color_purple, style.color_green];
+    const random = Math.floor(Math.random() * randstyle.length);
+    return randstyle[random];
   }
 
-  useEffect(() => {
-    // on key press 1, show projects
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "1") {
-        console.log("1 pressed")
-        const sidebar = document.getElementById("sidebar");
-        if (!sidebar) return;
-        if (sidebar.style.display === "block") {
-          sidebar.style.display = "none";
-        } else {
-          sidebar.style.display = "block";
-        }
-        //sidebar.classList.add(style.active);
-      }
-    });
-  }, []);
+  function handleSelect(e: any) {
+    setProject(projects.find((project) => project.name === e.target.textContent)!);
+  }
+
+  function activeSidebar(e: any){
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+      sidebar.classList.toggle(style.active);
+    }
+  }
   return (
     <div>
       <div className={style.sidebar} id="sidebar">
@@ -71,21 +74,27 @@ export default function MyProjects() {
         <div>
           <ul className={style.project_ul}>
             {projects.map((project) => (
-              <li className={style.project_li} onClick={handleSelect}>{project.name}</li>
+              <li
+                className={style.project_li}
+                onClick={handleSelect}
+                key={Math.floor(Math.random() * 4000)}
+              >
+                {project.name}
+              </li>
             ))}
           </ul>
         </div>
       </div>
 
       <div className={style.project_container}>
+        <div>
+          <h1 className={styleRoulete()}>{project.name}</h1>
+          <p className={style.text} onClick={activeSidebar}>{project.description}</p>
+        </div>
         {
-             /*
-                    <ASCII text={title} />
-            */
+          // If there is an image, display it
+          project.image && <Image src={project.image} alt="cat" className={style.project_image}/>
         }
-           
-        <h1>{title}</h1>
-        <p>{text}</p>
       </div>
     </div>
   );

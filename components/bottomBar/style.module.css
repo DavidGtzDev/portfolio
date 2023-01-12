@@ -1,0 +1,12 @@
+.bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    display: flex;
+}
+
+.bottom >img{
+    margin: 0%;
+}
