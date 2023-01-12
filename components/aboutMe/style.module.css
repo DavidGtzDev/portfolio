@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  
+  width: 80vw;
 }
 
 .text {
   margin-top: 15;
-  margin-left: 15;
 }
 
 .color_cyan {
@@ -40,13 +39,12 @@
 
 .comment {
   color: #abb2bf;
-  width: 40vw;
-  margin-left: 10px;
+  width: 35vw;
 }
 
 .aboutMe_image_container {
   display: flex;
-  width: 50vw;
+  width: 40vw;
   justify-content: space-around;
 }
 
@@ -60,6 +58,7 @@
 .aboutMe_image_second {
   filter: grayscale(100%) drop-shadow(12px 12px 0px #c678dd);
   margin-top: 40px;
+  margin-left: 30px;
   width: 25vw;
   height: 25vh;
   object-fit: cover;

@@ -51,13 +51,15 @@
   width: 10vw;
   height: 10vw;
   object-fit: cover;
+  filter: drop-shadow(12px 12px 0px #dcef6153)
 }
 
 .skills_image_second {
   margin-bottom: 50px;
-  width: 10vw;
+  width: 11vw;
   height: 10vw;
-  object-fit: cover;
+  object-fit: fill;
+  filter: drop-shadow(12px 12px 0px #61afef2f)
 }
 
 .skills_image_third {
@@ -65,4 +67,5 @@
   width: 10vw;
   height: 10vw;
   object-fit: cover;
+  filter: drop-shadow(12px 12px 0px #61ef9c58)
 }

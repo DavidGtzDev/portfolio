@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function BottomBar() {
   return (
     <div className={style.bottom}>
-        <Image src={smallarrowSVG} alt="smallarrow" />
+        <Image src={smallarrowSVG} alt="smallarrow"/>
         <Image src={arrowSVG} alt="arrow" />
     </div>
   )
