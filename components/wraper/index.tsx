@@ -6,6 +6,7 @@ import Skills from "../skills";
 import Github from "../github";
 import MyProjects from "../myProjects";
 import BottomBar from "../bottomBar";
+import ContactMe from "../contactMe";
 
 export default function Wraper() {
   return (
@@ -16,8 +17,9 @@ export default function Wraper() {
         <AboutMe />
         <Skills></Skills>
         <MyProjects></MyProjects>
-        <BottomBar></BottomBar>
-      </div>
+        <ContactMe></ContactMe>
+      </div>  
+      
     </div>
   );
 }

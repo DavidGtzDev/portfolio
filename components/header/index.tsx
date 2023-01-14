@@ -2,6 +2,7 @@ import React from "react";
 import style from "./style.module.css";
 import * as THREE from "three";
 import textureImg from "../../assets/texture_final.png"
+import { motion } from "framer-motion"
 export default function Header() {
 
   React.useEffect(() => {
@@ -66,10 +67,10 @@ export default function Header() {
   return (
     <div className={style.header}>
       <canvas id="background" className={style.background}></canvas>
-      <h1>
+      <motion.h1 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
         Hi, I'm
         <span className={style.name}> David </span>
-      </h1>
+      </motion.h1>
     </div>
   );
 }

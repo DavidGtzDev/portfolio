@@ -1,11 +1,16 @@
 import Image from "next/image";
 import catOneImg from "../../assets/cat_one.jpg";
 import style from "./style.module.css";
+import { motion } from "framer-motion";
 
 export default function AboutMe() {
   return (
-    <div className={style.aboutMe}>
-      <div className={style.text}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className={style.aboutMe}
+    >
+      <motion.div className={style.text}>
         <span className={style.color_cyan}>const </span>
         <span className={style.color_blue}>David </span>
         <span className={style.color_red}>= new </span>
@@ -17,22 +22,15 @@ export default function AboutMe() {
         <span className={style.color_yellow}> "Developer")</span>
 
         <p className={style.comment}>
-          /* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-          pretium pulvinar ex sodales ultricies. Cras sit amet justo vehicula
-          ligula vulputate posuere nec eu metus. Phasellus quis congue ligula.
-          Phasellus vitae libero in lacus maximus venenatis eu sed felis.
-          Curabitur fringilla erat quis dolor tempus, non interdum risus
-          aliquam.
-        </p> 
-        <p className={style.comment}>
-          Nullam luctus egestas diam, nec auctor lectus tempus ut.
-          Integer tempus dui nunc, vel sagittis metus tempor vel. Suspendisse ut
-          volutpat ante. Vestibulum hendrerit, leo in pharetra pulvinar, ante
-          justo dictum eros, id venenatis neque odio eu diam. Suspendisse sem
-          odio, fermentum quis accumsan a, malesuada ut nulla. Fusce imperdiet
-          sodales aliquam. */
+          /* Hi, my name is David Emiliano Gutiérrez Leal and I’m an 18 year old
+          developer who is currently studying at Tecnológico de Monterrey.
         </p>
-      </div>
+        <p className={style.comment}>
+          I’m mainly focused on web development but I am also passionate about
+          digital signal processing in C++. My main goal is to work on projects
+          that are not only challenging, but also beneficial to society. */
+        </p>
+      </motion.div>
       <div className={style.aboutMe_image_container}>
         <Image
           src={catOneImg}
@@ -45,6 +43,6 @@ export default function AboutMe() {
           className={style.aboutMe_image_second}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

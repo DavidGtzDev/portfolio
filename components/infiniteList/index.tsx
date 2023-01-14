@@ -7,7 +7,7 @@ export default function InfiniteList() {
     useEffect(() => {
         const infinite_ul = document.getElementById('infinite_ul');
         if(!infinite_ul) return;
-        for(let i = 0; i < 30; i++) {
+        for(let i = 0; i < 40; i++) {
             const li = document.createElement('li');
             li.textContent = i.toString();
             infinite_ul.appendChild(li);

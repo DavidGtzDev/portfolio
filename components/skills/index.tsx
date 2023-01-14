@@ -4,11 +4,12 @@ import Image from "next/image";
 import jsImg from "../../assets/js.jpg"
 import reactImg from "../../assets/react.jpg"
 import nodeImg from "../../assets/node.jpg"
+import { motion } from "framer-motion"
 
 export default function Skills() {
   return (
-    <div className={style.skills}>
-      <div className={style.skills_text}>
+    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className={style.skills}>
+      <motion.div className={style.skills_text}>
         <span className={style.color_blue}>David</span>
         .skills
         <span className={style.color_red}> = </span>
@@ -26,12 +27,12 @@ export default function Skills() {
           video games'] <br></br>
             {"}"}
         </span>
-      </div>
+      </motion.div>
       <div className={style.skills_image_container}>
         <Image src={jsImg} alt="js" className={style.skills_image_first}/>
         <Image src={reactImg} alt="react" className={style.skills_image_second}/>
         <Image src={nodeImg} alt="node" className={style.skills_image_third}/>
       </div>
-    </div>
+    </motion.div>
   );
 }
