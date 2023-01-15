@@ -2,9 +2,12 @@ import React from "react";
 import style from "./style.module.css";
 import Image from "next/image";
 import folderImg from "../../assets/folder.svg";
-import catImg from "../../assets/cat_one.jpg";
+import etherfuseImg from "../../assets/etherfuse.jpg";
+import startupImg from "../../assets/startup.jpg";
+import fintechImg from "../../assets/fintech.jpg";
+import tecImg from "../../assets/tecontime.png";
 //import ASCII from "react-rainbow-ascii";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 
@@ -25,26 +28,26 @@ export default function MyProjects() {
     {
       name: "Tec-on-Time",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
-      image: catImg,
+        "Tec-on-Time is a web application that guides students on campus to navigate through the facilities and thus arrive on time to their classes. It was developed collaboratively between several campuses. ",
+      image: tecImg,
     },
     {
       name: "Etherfuse Hackathon",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
-      image: catImg,
+        "Etherfuse Hackathon was an event in which the participants had to develop solutions using the blockchain technology.",
+      image: etherfuseImg,
     },
     {
       name: "Startup Weekend",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
-      image: catImg,
+        "Startup Weekend was an event in which the participants had to develop solutions to social issues. In this event our team won second place with FooScan, an app that allows you to scan barcodes and compare the nutritional content of several products.",
+      image: startupImg,
     },
     {
       name: "Fintech Hackathon",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas leo vel sapien commodo, dictum vestibulum est porta. Integer sed arcu quam. Suspendisse maximus sapien sem, ac commodo magna dignissim vitae. Sed sed magna tempus ante vestibulum elementum non congue mi. Maecenas posuere, nisi id laoreet pulvinar, purus nunc convallis turpis, ut finibus mi velit a urna. Nullam arcu dui, sollicitudin ac elit non, accumsan finibus turpis. Etiam ultrices lacinia ultrices. Nullam non pharetra est.",
-      image: catImg,
+        "Etherfuse Hackathon was an event in which the participants had to develop financial solutions using the blockchain technology. In this event our team won second place with Cryptostocks, a platform to tokenize actions.",
+      image: fintechImg,
     },
   ];
 

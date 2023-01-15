@@ -1,5 +1,7 @@
 import Image from "next/image";
 import catOneImg from "../../assets/cat_one.jpg";
+import meOneImg from "../../assets/meOne.jpg";
+import meTwoImg from "../../assets/meTwo.jpg";
 import style from "./style.module.css";
 import { motion } from "framer-motion";
 
@@ -33,12 +35,12 @@ export default function AboutMe() {
       </motion.div>
       <div className={style.aboutMe_image_container}>
         <Image
-          src={catOneImg}
+          src={meTwoImg}
           alt="Picture of the author"
           className={style.aboutMe_image_first}
         />
         <Image
-          src={catOneImg}
+          src={meOneImg}
           alt="Picture of the author"
           className={style.aboutMe_image_second}
         />
