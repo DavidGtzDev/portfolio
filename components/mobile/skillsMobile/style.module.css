@@ -1,0 +1,34 @@
+.color_cyan {
+  color: #56b6c2;
+}
+
+.color_blue {
+  color: #61afef;
+}
+
+.color_red {
+  color: #e06c75;
+}
+
+.color_green {
+  color: #98c379;
+}
+
+.color_yellow {
+  color: #e5c07b;
+}
+
+.color_white {
+  color: #ffffff;
+}
+
+.color_purple {
+  color: #c678dd;
+}
+
+.skills{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}

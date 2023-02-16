@@ -1,0 +1,23 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.about > p{
+    color: #abb2bf;
+}
+
+.about > h1{
+    color: #C678DD;
+}
+.about_image {
+    filter: grayscale(100%) drop-shadow(12px 12px 0px #C678DD);
+    object-fit: cover;
+    width: 80vw;
+    height: 40vh;
+    margin: 20px;
+}
