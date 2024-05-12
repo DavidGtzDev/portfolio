@@ -18,13 +18,12 @@ export default function Skills() {
         <br></br>
         <span className={style.color_yellow}>
             
-          'languages': ['JavaScript', 'Java', 'Python', 'C++'],<br></br>
-          'technologies': ['React', 'Node.js', 'Express', 'MongoDB',
+          'languages': ['JavaScript', 'Typescript', 'Python', 'C++', 'Rust'],<br></br>
+          'technologies': ['React', 'Node.js', 'Next Js','Express', 'MongoDB',
           'SQL','Git/Github', 'HTML/CSS'],<br></br>
           'soft-skills' : ['Teamwork', 'Problem Solving', 'Communication',
           'Creativity'], <br></br>
-          'hobbies': ['Guitar/Piano','Hanging out with my friends', 'Playing
-          video games'] <br></br>
+          'hobbies': ['Guitar/Piano','Hanging out with my friends'] <br></br>
             {"}"}
         </span>
       </motion.div>

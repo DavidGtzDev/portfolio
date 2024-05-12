@@ -19,12 +19,12 @@ export default function AboutMe() {
         <span className={style.color_green}>Person</span>
         <span className={style.color_yellow}>("David"</span>
         <span className={style.color_white}>,</span>
-        <span className={style.color_purple}> 18</span>
+        <span className={style.color_purple}> 20</span>
         <span className={style.color_white}>,</span>
         <span className={style.color_yellow}> "Developer")</span>
 
         <p className={style.comment}>
-          /* Hi, my name is David Emiliano Gutiérrez Leal and I’m an 18 year old
+          /* Hi, my name is David Emiliano Gutiérrez Leal and I’m a 20 year old
           developer who is currently studying at Tecnológico de Monterrey.
         </p>
         <p className={style.comment}>

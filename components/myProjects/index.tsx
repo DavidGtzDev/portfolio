@@ -6,6 +6,8 @@ import etherfuseImg from "../../assets/etherfuse.jpg";
 import startupImg from "../../assets/startup.jpg";
 import fintechImg from "../../assets/fintech.jpg";
 import tecImg from "../../assets/tecontime.png";
+import ripipsa from "../../assets/Ripipsa.png";
+import mathbook from "../../assets/mathbook.png";
 //import ASCII from "react-rainbow-ascii";
 import { useState } from "react";
 import type { StaticImageData } from "next/image";
@@ -49,6 +51,18 @@ export default function MyProjects() {
         "Etherfuse Hackathon was an event in which the participants had to develop financial solutions using the blockchain technology. In this event our team won second place with Cryptostocks, a platform to tokenize actions.",
       image: fintechImg,
     },
+    {
+      name: "Ripipsa AR",
+      description:
+        "An AR solution for real time model visualization designed for the company Ripipsa, a company which offers quality, high-performance products, services and personalized solutions that meet the specific needs of each client; thus optimizing the performance and operation of your industry.",
+      image: ripipsa,
+    },
+    {
+      name: "Mathbook",
+      description:
+      "An elegantly simple and user-friendly mathematical notebook, developed using React technology, designed to provide an interactive experience for users engaging with complex mathematical concepts.",
+      image: mathbook
+    }
   ];
 
   function styleRoulete() {
